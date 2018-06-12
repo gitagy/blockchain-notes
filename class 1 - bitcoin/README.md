@@ -259,7 +259,7 @@
    * 단순 주소 생성 - https://www.bitaddress.org
 
 ### Wallet transfer solution
-  > ![Wallet transfer solution](../image/Wallet_transfer_solution.png)
+  > ![Wallet transfer solution](../image/wallet_transfer_solution.png)
 
 ## Vanity(꾸미기) 주소
   > ![Vanity Address](../image/vanityplate.jpg)
