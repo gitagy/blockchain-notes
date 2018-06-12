@@ -11,7 +11,7 @@
 * All DLTs are NOT Blockchains. But all Blockchains are DLTs
 * Not all the cryptocurrencies are blockchain implementations.
   * Radix, IOTA and R3 Corda are examples of DLTs that are NOT blockchains.
-  > ![Distributed Ledger Technology](img/dlt.png)
+  > ![Distributed Ledger Technology](../image/dlt.png)
 
 # 비트코인
 
@@ -24,12 +24,12 @@
 
 ## 블록이란?
 
-* 필수정보
+* 기본정보
   * 블록해시
   * 이전블록해시
   * 머클루트
   * 버전, 타임스탬프, Bits(Difficulty), Nonce
-* 필수정보와 검증된 거래정보가 원장에 기록되기 위해 마이너에 의해 블록으로 생성
+* 기본정보와 검증된 거래정보가 원장에 기록되기 위해 마이너에 의해 블록으로 생성
 * 마이너는 높은 수수료를 지불한 거래를 포함하여 기록될 거래를 선택 가능
   * ViaBTC 마이닝풀에서 운영중인 트랜잭션 가속기 - https://pool.viabtc.com/tools/txaccelerator/
     * 무료 또는 유료 서비스가 가능
@@ -37,14 +37,14 @@
     * ViaBTC 마이닝풀에서 채굴에 성공할 경우, 서비스 수수료를 받고 우선권을 부여하는 방식 (채굴 못하면 도루묵)
 * 비트코인 블록 용량은 1MB 로 제한됨 (블록체인마다 제한점이 다름)
   * 용량 제한으로 기록가능한 거래정보도 제한
-  * 비트코인의 블록생성 기준인 10분과 용량제한을 가지고 tps(초당 트랜잭션 처리량)를 추정 가능
+  * 비트코인의 블록생성 기준인 10분과 용량제한을 가지고 tps(초당 트랜잭션 처리량 [2~4 사이?])를 추정 가능
 
 ## 체인이란?
 
 * 모든 블록은 이전블록해시를 기록
 * 현재 블록에서 이전블록해시를 계속 찾아가면 제네시스 블록에 도달
 * 현재 블록해시는 다음블록의 이전블록해시에 기록되어 연결
-  > ![BlockChain](img/blockchain.png)
+  > ![BlockChain](../image/blockchain.png)
 
 ## 시스템 구성
 
@@ -83,7 +83,7 @@
 * 노드 어플리케이션
   * Bitcoin core(C++) - https://github.com/bitcoin/bitcoin
   * Bitcore(Nodejs) - https://github.com/bitpay/bitcore/
-  * btcd(Golang) - https://github.com/btcsuite/btcd
+  * btcd(Golang) - https://github.com/btcsuite/btcd 
   * 프로토콜만 지키면 누구든지 커스텀 노드 제작이 가능
   * 유틸리티
     * pycoin(Python) - https://github.com/richardkiss/pycoin
@@ -96,7 +96,7 @@
 * 총 발행 후 마이너는 거래 수수료 만을 보상으로 획득
 * 코인 이코노미
 * Projected Bitcoins Long Term - https://en.bitcoin.it/wiki/Controlled_supply#Projected_Bitcoins_Long_Term
-  > ![Reward](img/supply.png)
+  > ![Reward](../image/supply.png)
 
 ## Proof of Work
 
@@ -108,25 +108,31 @@
 * 각 채굴자는 P2P 네트워크로 부터 새로운 블록을 받게 되면 즉시 새로운 블록으로 PoW 를 재시작
 * 무작위 이기 때문에 블록생성 주기는 약간 유동적
 * 마이닝의 방법은 CPU > GPU > FGA > ASIC 방식으로 변화 했고, 전력대비 해시레이트를 높이는게 목표
-  > ![PoW](img/pow.jpg)
+  > ![PoW](../image/pow.jpg)
 * 난이도 : 주어진 목표값 아래 해시(블록)를 찾는 것이 얼마나 어려운지를 측정한 값
 * 난이도 목표값 : 헤더의 nBits 이며, 네트워크 내의 해싱파워로 약 10분마다 블록을 찾을 수 있는 난이도
   * 최소값 : 1 (시작값이며 제네시스 블록의 헤더 값)
   * 최대값 : 0x00000000FFFF0000000000000000000000000000000000000000000000000000 (상수)
 * 난이도 재설정 : 매 2016블록(약 2주) 마다 이전 2016블록의 해싱파워를 기준으로 재계산
   * 이전 2016블록 채굴이 2주보다 빠르면 난이도 상승, 반대면 하락
-  > ![Difficult target](img/nbits.png)
+  > ![Difficult target](../image/nbits.png)
 * 그래프상 2곳에서 난이도가 하향 되었는데 해시파워가 가격상승으로 채산성이 높아 졌던 비트코인캐시로 집중되어 일시적 하향된 경우
-  > ![Difficulty](img/difficulty.png)
+  > ![Difficulty](../image/difficulty.png)
 
 ## 해싱(블록찾기)
 
 * 해시파워는 파일 용량 단위와 동일한 킬로/메가/기가/테라해시 등의 단위가 존재
 * 1메가 해시파워는 초당 1,000,000번의 해싱이 가능
 * 해싱
-  * 비트코인 네트워크 총 HashRate는 35~40ExaHashes/s
+  * 비트코인 네트워크 총 HashRate는 40ExaHashes/s
   * 최강의 비트코인 하드웨어 채굴기 Antminer S9은 대당 14TeraHashes/s
-  > ![Block Structure](img/block.png)
+  * S9 1EA 가 네트워크에서 차지하는 비율 > 40/14*1024*1024 = 1/3,000,000
+  * S9 300,000EA 10% 비율 가능, 대당 100만원 일때 3천억
+  * S9 1,500,000 50% 비율 가능, 1조 5천억
+  > ![Block Structure](../image/block.png)
+  * 해킹 관련
+    * ASIC 하드웨어 수급 불가
+    * 51% 는 공격이 가능하다는 것이고 해킹 되었다 라고 보기는 불가
 
 # 비트코인 블록이 만들어지는 과정
 
@@ -166,31 +172,111 @@
 * 생성과 동일한 절차로 유효성 검증
 * 완료된 해싱 값은 Nonce 에 기록되어 전파 되기 때문에 즉시 모든 유효성 검증 가능
 
-# 인사이드 비트코인
+# 코인 인사이드
 
-## PaperWallet
- * https://paperwalletbitcoin.com/?=BTCPW
+## 마이닝풀
 
-## 주소
-  > ![Address](img/bitcoin_addr.png)
+* PoW 코인은 채굴자가 증가 할 수록 난이도가 증가
+* 해시파워가 높을 수록 채굴에 유리 (당연)
+* 코인의 난이도에 따라 수십대의 채굴기를 운영해도 하루에 1개의 블록도 채굴하지 못 할 수 있고 시간이 지남에 따라 점차 더 필요 대 수가 늘어남.
+* 이에 서비스 업자가 개인들의 채굴기를 그룹화(논리적)하여 해시파워를 높여 채굴 가능성을 높이기 위해 만들어진 것이 **마이닝 풀**
+* 개인들에게 해싱 구역을 나누어 주고 채굴에 성공할 경우 수수료를 제외한 보상을 투입지분 만큼 나누는 방식
+* 일반적으로 수수료는 1~2% 수준
+  > ![Mining Pool](../image/bitcoin_mining_pool.png)
 
-## UTXO / Spending(송금)
-  > ![UTXO](img/utxo.jpg)
+## Address
+  > ![Address](../image/bitcoin_addr.png)
+ * Bitcoin QR Code Generator - https://gobitcoin.io/tools/qrcode/
+  > ![Bitcoin Girl](../image/bitcoin_girl.jpg)
 
+## Wallet
+ * 가장 단순하게는 비밀키 1개
+   * 하지만 공개적으로 노출되어 입금도 받아야 하기에 비밀키에 대응되는 공개키(실제로는 주소)와 쌍으로 존재
+   * 공개키는 비밀키만 있으면 동일하게 생성 가능
+   * 단지, 연산 과정을 없애고 미리 생성해 두는 것 일 뿐
+  > ![Private Key](../image/bitcoin_private_key.png)
+ * 이러한 비밀키, 공개키 쌍이 여러개 존재 하는 것
+ * 거래소 등의 지갑에는 이런 비밀키, 공개키 쌍이 수천 ~ 수천만개를 고객과 매핑하여 관리
+  > ![Bitcoin Wallet Sheet](../image/bitcoin_wallet.jpg)
+  > ![Dump Wallet](../image/bitcoin_dump_private_key.png)
 
-# 기타
+### Hot Wallet
+ * 온라인에 접속되어 언제든지 입/출금이 가능한 상태의 지갑
+ * 필요한 유동성 만큼만 보관
 
-## 이더리움
- - SmartContract
-  - 불변의 계약
-  - 스마트컨트랙트(1994년 Nick Schzabo가제창) 개념도실적용
-  -  계약이만들어지면블록체인상에서는무조건이행을해야함
-  - 중개자(Middle man)를믿지못하는환경에용이
- - Token 은 무엇인가?
+### Cold Wallet
+ * 기본적으로는 오프라인 상태로 입/출금이 불가능
+ * 별도의 과정을 거쳐 Hot Wallet 에 입금하거나 키 쌍을 추가하여 온라인화, 유동성 주입
+ * 종류
+   * 하드웨어 지갑
+   * 종이 지갑
+   * 독자 구축 솔루션
+     * 생체 인식 연동
+     * 접근 레벨에 따라 정해진 단위의 출금정보 제공
+     * 노드를 이용해서 입맛대로 구축 가능
 
-## 스팀
- - 댄라이머가 개발, dpos 컨센서스, 이 후 dpos 로 eos 를 개발 (가장 유망한 블록체인 중 하나)
- - steem db는 도대체 먼가?
- - steemit 은 먼데?
- - 왜 이렇게 구린가?
- - https://steemit.com/coinkorea/@coolzero/sns-18-06-04
+### Hardware Wallet
+  > ![HardWare Wallet Guide](../image/hardware_wallet_guide.jpg)
+ 
+## Paper Wallet
+ * 비밀키와 공개키를 종이에 인쇄하고 자르고 접어서 물리적 지갑 형태로 만들어 공개키만 보이도록 하는 방식
+  > ![Paper Wallet](../image/bitcoin_paperwallet.png)
+
+ * 코인의 보안
+   * 코인은 비밀키를 사용하여 소비가 되므로 분실하면 복구 불가
+   * 비밀키 소지자 모두 소비가 가능하므로 유출 또는 해킹되어 소비되면 복구(?) 불가
+
+ * 비밀키의 보관
+   * 비밀키를 보관하는 가장 안전한 방법은 **기억** 이지만 인간의 단점이자 장점인 **기억력**의 한계로 인해 불가능
+     > **> 인쇄**
+   * 비밀키를 텍스트 파일로 보관
+     * 디지털은 기본적으로 보안설비와 전문지식이 없으면 **취약**, 유출 가능성이 있음
+   * 파일을 단순 암호화 또는 BIP38 암호화로 보관 (사용시 암호 입력 필요)
+     * 사전에 있는 단순한 단어나 짧은 단어는 **대입 공격** 으로 해독 가능성이 있음
+     * 해독 가능성 대응을 위해 어렵고 긴 문자, 숫자, 특수문자의 조합은 기억하기 어려워 별도로 기록 해야함.
+       > **> 인쇄**
+     * 단순 암호화와 BIP38의 차이는 사용 편의성을 위해 클라이언트의 지원여부
+   * 하드웨어 지갑
+     * 고장 가능성이 있음
+     * Seed 복원 모드로 여러개로 복제하여 고장 대응 가능
+     * 동시 고장 가능성이 있음 (몇개를 복제 할 것인가?)
+     * 복원을 위해서 Seed(mnemonic words)를 별도 보관
+       > ![mnemonic words](../image/mnemonic_words.png)
+     * 어차피
+       > **> 인쇄**
+
+ * 인쇄
+   * 가장 안전한 보관 방법
+   * 인쇄된 종이지갑(BIP38 적용가능)을 금고에 보관
+     * 내화금고
+     * 은행금고
+     * 복사하여 여러 지역에 분산
+   * 10,000개(천억상당)의 비트코인을 100개(십억상당) 단위로 종이지갑에 넣어 보관
+   * 200개 필요시 종이지갑 2개를 인출하여 사용
+
+ * 서비스
+   * 종이 지갑 생성 - https://paperwalletbitcoin.com/?=BTCPW
+   * 단순 주소 생성 - https://www.bitaddress.org
+
+### Wallet transfer solution
+  > ![Wallet transfer solution](../image/Wallet_transfer_solution.png)
+
+## Vanity(꾸미기) 주소
+  > ![Vanity Address](../image/vanityplate.jpg)
+ * 리더블한 문자를 포함하는 유효 비트코인 주소
+ * 주소의 첫 문자를 **BitCoiNGo**로 구성 (맨 첫자리는 1,3,5 로 고정되어 있음)
+ * 무작위로 개인키를 생성하며 공개키 및 비트코인 주소를 생성하고 주소가 원하는 패턴에 맞을 때 까지 반복
+ * 꾸미기 주소가 일반 주소와 다른점은 오직 보이는 것
+ * 생성 난이도
+   > ![Vanity Difficulty](../image/vanity.png)
+
+## UTXO
+  > ![UTXO](../image/utxo.jpg)
+
+### 잠금 스크립트
+
+### 해제 스크립트
+
+### UTXO Spending(송금)
+
+## Multi-Sig
