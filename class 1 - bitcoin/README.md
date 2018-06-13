@@ -302,7 +302,7 @@ Privkey: 5JLkvKL2amCaizEefmqwAWXPxyz8MZSZVYrXEKoC8ao7AwJBJ1Y
 
 ## UTXO
   > ![UTXO](../image/utxo.jpg)
-
+  > ![UTXO Chain](../image/utxo_chain.png)
 ### 잠금 스크립트
 
 ### 해제 스크립트
