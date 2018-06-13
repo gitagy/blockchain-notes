@@ -269,6 +269,36 @@
  * 꾸미기 주소가 일반 주소와 다른점은 오직 보이는 것
  * 생성 난이도
    > ![Vanity Difficulty](../image/vanity.png)
+ * 만들어 보기
+   * 유틸리티 - https://github.com/samr7/vanitygen
+   * **inn** 와 **inno** 로 구성, 각각 5초, 10분 정도 소요
+```
+[root@gitagy-22671 vanitygen]# ./vanitygen 1inn
+Difficulty: 4553521
+Pattern: 1inn
+Address: 1innFcD634Y1zxf1wx5bwP1KGfX1MKf6L
+Privkey: 5KFZiW2tRKtbuchwk8tH2L34q7RiYGR7rF1AucSsDKjRM8uerQf
+
+[root@gitagy-22671 vanitygen]# ./vanitygen 1inno
+Difficulty: 264104224
+Pattern: 1inno
+Address: 1innoh7oS33pXbA9oQrt34qtRM6paWQSB
+Privkey: 5JLkvKL2amCaizEefmqwAWXPxyz8MZSZVYrXEKoC8ao7AwJBJ1Y
+```
+ * Vanity Pool
+   * 만약, 기관의 모금용 비트코인 주소를 **saveEarth** 로 구성하고 싶다면
+   * CPU 또는 GPU 로 한다고 해도 성능에 따라 수개월 ~ 수백년의 시간이 소요
+   * **Vanity Pool** 은 꾸미기 주소 풀에 비용을 주고 외주는 주는 격
+
+## Confirmation
+ * 거래(트랜잭션)는 생성 후 즉시 연결된 피어노드에 브로드캐스팅 되어 수초내에 대부분의 노드에서 인식
+ * 비트코인 지갑에서는 거래의 **인식**과 **완료**를 별개로 보는데 완료를 위해서는 Confirmation 이 필요
+ * 거래가 채굴된 블록에 최초로 포함되면 0 Confirmation, 이 후 추가로 블록이 채굴될 때마다 Confirmation 이 증가
+  * Bitcoin transaction confirmation process
+    > ![Confirmation](../image/bitcoin_confirmation_process.png)
+ * 송금된 비트코인이 **입금 완료**되어 수신자에 의해 사용 가능하려면 6 Confirmation(약1시간) 이 필요
+ * 6 Confirmation은 비트코인 지갑의 기본 프로토콜이며 거래소등 에서는 1~3 Confirmation 사이에 미리 완료로 처리 하기도 함. (거래소 마다 다름)
+ * 송금과 다르게 채굴 보상으로 발행된 비트코인은 100 Confirmation 이 필요
 
 ## UTXO
   > ![UTXO](../image/utxo.jpg)
