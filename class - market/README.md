@@ -118,6 +118,10 @@
 ### 라이센스 거래소
  * Gemini (제미니)
    * 뉴욕금융서비스국(NYSDFS)으로 부터 비트라이센스(BitLicense) 획득
+ * ItBit Gets NY Regulatory Approval
+   > itBit has received approval from the New York State Department of Financial Services (NYDFS) to add trading in four new cryptocurrencies,
+ * 스퀘어
+   * 캐시앱을 통한 매매, 비트라이센스 획득
 
 ## 국가별 거래소
  * 홍콩 (중국)
@@ -201,6 +205,9 @@
      > ![6](../image/exchange2_screenshot/bitpanda-cc-6.jpg)
    * 결제 정보
      > ![7](../image/exchange2_screenshot/bitpanda-cc-7.jpg)
+
+## OTC 시장
+  * LocalBitcoin
 
 ## 코인 신규 상장 프로세스
  1. 허울 뿐인 거래소의 코인 분석 및 보고서
