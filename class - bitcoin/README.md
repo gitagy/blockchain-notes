@@ -13,6 +13,19 @@
   * Radix, IOTA and R3 Corda are examples of DLTs that are NOT blockchains.
   > ![Distributed Ledger Technology](../image/dlt.png)
 
+## BFT
+  > 비잔틴 장군문제
+
+
+## Double spending
+ > 이중지불 문제
+
+내용 추가 정리에 참고
+https://github.com/HomoEfficio/warehouse/blob/master/etc/DemystifyingBlockChain.md
+
+UTXO 참고해서 추가 정리
+https://github.com/HomoEfficio/warehouse/blob/master/etc/Bitcoin-Study.md
+
 # 비트코인
 
 ## 최초의 블록체인

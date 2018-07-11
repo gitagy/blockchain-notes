@@ -162,6 +162,13 @@
  * 싱가포르
    * Coinbene
    * COSS
+   * BiteBTC
+ * 베트남
+   * V btc?
+ * 태국
+   *
+ * 인도네시아
+   * coinone.co.id
  * 러시아
    * Yobit
  * 기타
@@ -205,6 +212,21 @@
      > ![6](../image/exchange2_screenshot/bitpanda-cc-6.jpg)
    * 결제 정보
      > ![7](../image/exchange2_screenshot/bitpanda-cc-7.jpg)
+
+## 탈중앙 거래소
+  > 중앙 거래소의 해킹 또는 먹튀
+  > 규제, 제도가 밑받침 되지 않아 중앙거래소의 만행이 심하다.
+  > 탈중앙화를 추구한다면 거래도 탈중앙 해야 한다.
+  * 거래소 종류
+    * EtherDelta
+    * idex
+    * 진행중
+      * Nex
+  * 중앙 거래소에 비해서 사용자경험이 현전히 떨어진다.
+    * 구린 인터페이스
+    * 체결에 시간이 오래 걸리고, 재사용에도 시간이 걸린다.
+    * https://enerchain.ponton.de/index.php/21-enerchain-p2p-trading-project
+
 
 ## OTC 시장
   * LocalBitcoin
